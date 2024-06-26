@@ -1,22 +1,32 @@
-// src/components/App.jsx
-
-import { Product } from "./Product";
-
-export default function App() {
+import { Profile } from './profile/Profile';
+import user from './profile/user.json';
+import { FriendList } from './friendList/FriendList';
+import friends from './friendList/friends.json';
+import { TransactionHistory } from './transactionHistory/TrasactionHistory';
+import transactions from './transactionHistory/transactions.json';
+export const App = () => {
   return (
-    <div>
-      <h1>Best selling</h1>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 20,
+        color: '#010101',
+      }}
+    >
+      <Profile
+        userName={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
 
-      <Product
-        name="Tacos With Lime"
-        // imgUrl="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?dpr=2&h=480&w=640"
-        price={10.99}
-      />
-      <Product
-        name="Fries and Burger"
-        imgUrl="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?dpr=2&h=480&w=640"
-        price={14.29}
-      />
+      <FriendList friends={friends} />
+
+      <TransactionHistory transactions={transactions} />
     </div>
   );
-}
+};
