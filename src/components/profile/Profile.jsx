@@ -1,7 +1,7 @@
 import css from './Profile.module.css';
 import PropTypes from 'prop-types';
 
-export const Profile = ({ userName, tag, location, avatar, stats }) => {
+const Profile = ({ userName, tag, location, avatar, stats }) => {
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -39,3 +39,4 @@ Profile.propTypes = {
     views: PropTypes.number.isRequired,
   }).isRequired,
 };
+ export default Profile;

@@ -1,10 +1,10 @@
-import { Profile } from './profile/Profile';
+import Profile  from './profile/Profile';
 import user from './profile/user.json';
-import { FriendList } from './friendList/FriendList';
+import  FriendList from './friendList/FriendList';
 import friends from './friendList/friends.json';
-import { TransactionHistory } from './transactionHistory/TrasactionHistory';
+import  TransactionHistory  from './transactionHistory/TrasactionHistory';
 import transactions from './transactionHistory/transactions.json';
-export const App = () => {
+const App = () => {
   return (
     <div
       style={{
@@ -30,3 +30,4 @@ export const App = () => {
     </div>
   );
 };
+ export default App;
