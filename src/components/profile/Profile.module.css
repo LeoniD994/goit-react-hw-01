@@ -58,8 +58,11 @@
   margin-bottom: 5px;
 }
 
-.quantity {
+.quantiny {
   font-size: 18px;
-  font-weight: 700;
-  display: block;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }

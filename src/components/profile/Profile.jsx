@@ -1,5 +1,8 @@
 import css from './Profile.module.css';
 import PropTypes from 'prop-types';
+import { AiOutlineLike } from 'react-icons/ai';
+import { FaEye } from 'react-icons/fa';
+import { IoPeople } from 'react-icons/io5';
 
 const Profile = ({ userName, tag, location, avatar, stats }) => {
   return (
@@ -14,15 +17,24 @@ const Profile = ({ userName, tag, location, avatar, stats }) => {
       <ul className={css.stats}>
         <li className={css.item}>
           <span className={css.label}>Followers</span>
-          <span className={css.quantiny}>{stats.followers}</span>
+          <span className={css.quantiny}>
+            <IoPeople />
+            {stats.followers}
+          </span>
         </li>
         <li className={css.item}>
           <span className={css.label}>Views</span>
-          <span className={css.quantiny}>{stats.views}</span>
+          <span className={css.quantiny}>
+            <FaEye />
+            {stats.views}
+          </span>
         </li>
         <li className={css.item}>
           <span className={css.label}>Likes</span>
-          <span className={css.quantiny}>{stats.likes}</span>
+          <span className={css.quantiny}>
+            <AiOutlineLike />
+            {stats.likes}
+          </span>
         </li>
       </ul>
     </div>
@@ -39,4 +51,4 @@ Profile.propTypes = {
     views: PropTypes.number.isRequired,
   }).isRequired,
 };
- export default Profile;
+export default Profile;
